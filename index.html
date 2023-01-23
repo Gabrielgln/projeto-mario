@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!----link para a fonte do poppins do google-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <!---link para colocar o icone na pagina-->
+    <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    
+    <title>Super Mario Bros - O Filme</title>
+</head>
+
+<body>
+    <!----tag para rodar o video de fundo-->
+    <div class="fundo-video">
+        <!---video de fundo da pagina-->
+        <!----autoplay = para rodar o video sozinho sempre que carregar o site-->
+        <!---loop = para quando ele terminar, roda novamente-->
+        <!-----muted = para mutar o video-->
+        <video class="video" autoplay loop muted>
+            <source src="./src/video/video-mario.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!--cabeçalho-->
+    <header class="cabecalho">
+        <!---tag pra link-->
+        <a href="">
+            <img class="logo" src="./src/imagens/logo-chapeu-mario.png" alt="logo-chapeu-mario">
+        </a>
+        <!--tag para navegação-->
+        <nav>
+            <!---tag para listas desordenada-->
+            <ul class="menu">
+                <!---tag para itens da lista-->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--parte principal-->
+    <main class="container">
+        <!----tag coringa para qualquer coisa-->
+        <div class="informacoes">
+            <img class="imagem-titulo" src="./src/imagens/titulo.png" alt="titulo-do-filme">
+            <p class="descricao">Mario é um encanador junto com seu irmão Luigi. Um dia, eles vão parar no reino
+                dos cogumelos, governado pela Princesa Peach, mas ameaçado pelo rei dos Koopas, que faz de tudo
+                para conseguir reinar em todos os lugares.
+            </p>
+            <button class="botao-trailer">Veja o trailer</button>
+        </div>
+        <!----tag para uso de imagem-->
+        <img class="mario" src="./src/imagens/super-mario-chars.png" alt="super-mario-chars">
+
+        <div class="modal">
+            <div class="conteudo-modal">
+                <span class="fechar-modal">X</span>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Cb4WV4aXBpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

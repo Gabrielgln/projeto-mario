@@ -1,0 +1,174 @@
+body {
+    /*colocar uma fonte no corpo do html*/
+    font-family: 'Poppins';
+}
+
+.cabecalho {
+    /*colocar tudo que ta no cabecalho um do lado do outro*/
+    display: flex;
+    /*colocar um espaço nos elementos*/
+    justify-content: space-between;
+    /*colocar um espaçamento*/
+    padding: 30px;
+    /*centralizar o cabecalho*/
+    max-width: 1300px;
+    margin: 0 auto;  
+}
+
+.cabecalho .logo {
+    /*definir o tamanho da logo do cabecalho*/
+    width: 65px;
+}
+
+.cabecalho .menu {
+    /*colocar tudo que ta no menu do cabecalho um do lado do outro*/
+    display: flex;
+    /*alinhar o menu para o centro do cabecalho*/
+    align-items: center;
+    /*alinhar o menu para consumir todo o cabecalho*/
+    height: 100%; 
+}
+
+.cabecalho nav li a {
+    /*mudar a fonte dos elementos que estão na tag "a" que está dentro do cabecalho para negrito*/
+    font-weight: bold;
+    /*colocar a cor dos elementos que estão na tag "a", todos para branco*/
+    color: #ffffff;
+    /*mudar o tamanho dos elementos que estão na tag "a"*/
+    font-size: 25px;
+    /*colocar um espaçamento dos elementos que estão na tag "a"*/
+    padding: 10px 20px;
+    /*deixar a bordar arredondada nas tags "a" do cabecalho*/
+    border-radius: 50px;
+    /*tempo de transição quando passar o mouse em cima dos elementos da tag "a"*/
+    transition: 0.2s;  
+}
+
+/*a:hover é uma ação quando passar o mouse em cima do elemento que ta na tag "a"*/
+.cabecalho nav li a:hover {
+    /*definindo a cor que vai ser visualizada quando passar o mouse em cima*/
+    background-color: #d5011d;
+}
+
+.container {
+    /*centralizar o container*/
+    max-width: 1300px;
+    margin: 0 auto;
+    /*colocar tudo que ta no container um do lado do outro*/
+    display: flex;
+    /*alinhar o container no centro*/
+    align-items: center;
+    /*definir o container 100% do tamanho da tela - menu*/
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+}
+
+.container .imagem-titulo {
+    /*definir a largura maxima da imagem*/
+    max-width: 500px;
+}
+
+.container .descricao {
+    /*definir a cor da descrição*/
+    color: #a8adb7;
+    /*definir a largura da descrição*/
+    width: 85%;
+    /*definir o tamanho da descrição*/
+    font-size: 18px;
+    /*definir a margem da descrição*/
+    margin: 30px 0;
+}
+
+.container .botao-trailer {
+    background-color: #ff0021;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    /*mudar o cursor do mouse quando passar em cima do botão*/
+    cursor: pointer;
+    /*definir a bordar*/
+    border: none;
+    /*definir o texto em caixa alta*/
+    text-transform: uppercase;
+    /*definir o transição quando passar o mouse em cima*/
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao-trailer:hover {
+    /*escalar o botão quando passar o mouse em cima*/
+    transform: scale(1.1);
+}
+
+.fundo-video {
+    /*definir onde posicionar o video*/
+    position: absolute;
+    /*definir o video atrás de todos os elementos no eixo z*/
+    z-index: -1;
+    /*definir a ocupação total da pagina*/
+    width: 100vw;
+    height: 100vh;
+    /*tirar o scroll da pagina*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video {
+    height: 100vh;
+}
+
+/*esconder a borda sobrando*/
+.fundo-video::after {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #040203 0%, rgba(0, 0, 0, 0.85) 49%, #040203 100%);
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.fechar-modal {
+    background-color: #ffffff;
+    color: #f03a17;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal iframe {
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+/*duas classes que vão ser usadas como containers, uma hora aberto e outra fechado*/
+.modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+
